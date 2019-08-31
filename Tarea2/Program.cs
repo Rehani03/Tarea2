@@ -10,6 +10,8 @@ namespace Tarea2
     {
         static void Main(string[] args)
         {
+            Tarea2.Menu menu = new Menu();
+            menu.Start();
         }
     }
 }
