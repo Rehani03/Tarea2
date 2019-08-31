@@ -8,14 +8,19 @@ namespace Tarea2
 {
     public class Menu
     {
+        private int opcion, numero;
+
         public void Start()
         {
-            int opcion;
-            try
+            
+            Tarea2.EjerciciosTarea2.Factorial factorialNumero = new EjerciciosTarea2.Factorial();
+            Tarea2.EjerciciosTarea2.DeNumeroALetras convertir = new EjerciciosTarea2.DeNumeroALetras();
+            do
             {
-
-                do
+                try
                 {
+
+
                     Console.Clear();
 
                     Console.WriteLine("                     Programacion Aplicada I");
@@ -30,12 +35,20 @@ namespace Tarea2
                     switch (opcion)
                     {
                         case 1:
-                            Console.ReadKey();
+                            Console.Clear();
+                            Console.Write("Ingrese un numero:");
+                            numero = Convert.ToInt32(Console.ReadLine());
+                            factorialNumero.calcularFactorial(numero);
                             break;
                         case 2:
+                            Console.Clear();
+                            Console.Write("Ingrese el numero a convertir:");
+                            numero = Convert.ToInt32(Console.ReadLine());
+                            convertir.ConvertirNumeros(numero);
                             Console.ReadKey();
                             break;
                         case 3:
+
                             Environment.Exit(1);
                             break;
 
@@ -44,17 +57,14 @@ namespace Tarea2
                             Console.ReadKey();
                             break;
                     }
-
-
                 }
-                while (opcion != 3);
+                catch (Exception error)
+                { 
+                    Console.WriteLine("Error " + error);
+                    Console.ReadKey();
+                }
             }
-            catch (Exception error)
-            {
-
-                Console.WriteLine("Error " + error);
-                Console.ReadKey();
-            }
+            while (opcion != 3);
         }
     }
 }
