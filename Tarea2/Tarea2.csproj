@@ -43,9 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EjerciciosTarea2\AgendaHash.cs" />
     <Compile Include="EjerciciosTarea2\ArregloDeEstudianteJagged.cs" />
     <Compile Include="EjerciciosTarea2\DeNumeroALetras.cs" />
+    <Compile Include="EjerciciosTarea2\DiccionarioPalabras.cs" />
     <Compile Include="EjerciciosTarea2\Factorial.cs" />
+    <Compile Include="EjerciciosTarea2\PromedioArrayList.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

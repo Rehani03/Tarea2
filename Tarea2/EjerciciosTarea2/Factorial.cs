@@ -8,6 +8,7 @@ namespace Tarea2.EjerciciosTarea2
 {
     public class Factorial
     {
+        //este es el Ejercicio 4 del Capitulo 5
         public void calcularFactorial(int numero)
         {
             double resultado = 1;

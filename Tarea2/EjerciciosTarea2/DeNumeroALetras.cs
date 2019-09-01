@@ -8,6 +8,7 @@ namespace Tarea2.EjerciciosTarea2
 {
     public class DeNumeroALetras
     {
+        //este es el Ejercicio 5 del Capitulo 5
         public void ConvertirNumeros(double numero)
         {
             switch (numero)
