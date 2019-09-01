@@ -9,12 +9,16 @@ namespace Tarea2
     public class Menu
     {
         private int opcion, numero;
+        private const int PROMEDIO = 1, MAYOR = 2, MENOR = 3, JAGGED =4;
 
         public void Start()
         {
             
             Tarea2.EjerciciosTarea2.Factorial factorialNumero = new EjerciciosTarea2.Factorial();
             Tarea2.EjerciciosTarea2.DeNumeroALetras convertir = new EjerciciosTarea2.DeNumeroALetras();
+            Tarea2.EjerciciosTarea2.ArregloDeEstudianteJagged arreglosEstudiante = new EjerciciosTarea2.ArregloDeEstudianteJagged();
+
+
             do
             {
                 try
@@ -28,7 +32,11 @@ namespace Tarea2
                     Console.WriteLine("                    Rehani Cordero 2017-0302\n\n");
                     Console.WriteLine("1. Calcular Factorial de un numero");
                     Console.WriteLine("2. Ingresar un numero en digitos e imprimirlo en letras");
-                    Console.WriteLine("3. Salir");
+                    Console.WriteLine("3. Calcular Promedio de arreglo Jagged");
+                    Console.WriteLine("4. Calcular Mayor Calificacion de arreglo Jagged");
+                    Console.WriteLine("5. Calcular Menor Calificacion de arreglo Jagged");
+                    Console.WriteLine("6. Programa que pasa un arreglo Jagged a una funcion");
+                    Console.WriteLine("7. Salir");
                     Console.Write("Opcion:");
                     opcion = Convert.ToInt32(Console.ReadLine());
 
@@ -48,7 +56,22 @@ namespace Tarea2
                             Console.ReadKey();
                             break;
                         case 3:
-
+                            Console.Clear();
+                            arreglosEstudiante.ComienzoDeEstudiantes(PROMEDIO);
+                            break;
+                        case 4:
+                            Console.Clear();
+                            arreglosEstudiante.ComienzoDeEstudiantes(MAYOR);
+                            break;
+                        case 5:
+                            Console.Clear();
+                            arreglosEstudiante.ComienzoDeEstudiantes(MENOR);
+                            break;
+                        case 6:
+                            Console.Clear();
+                            arreglosEstudiante.ComienzoDeEstudiantes(JAGGED);
+                            break;
+                        case 7:
                             Environment.Exit(1);
                             break;
 
@@ -64,7 +87,7 @@ namespace Tarea2
                     Console.ReadKey();
                 }
             }
-            while (opcion != 3);
+            while (opcion != 7);
         }
     }
 }
