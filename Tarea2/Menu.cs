@@ -20,7 +20,8 @@ namespace Tarea2
             Tarea2.EjerciciosTarea2.PromedioArrayList promedio = new EjerciciosTarea2.PromedioArrayList();
             Tarea2.EjerciciosTarea2.DiccionarioPalabras diccionario = new EjerciciosTarea2.DiccionarioPalabras();
             Tarea2.EjerciciosTarea2.AgendaHash agendaNueva = new EjerciciosTarea2.AgendaHash();
-
+            Tarea2.EjerciciosTarea2.FormatoFecha fecha = new EjerciciosTarea2.FormatoFecha();
+            Tarea2.EjerciciosTarea2.CadenasEnOrden ordenCadena = new EjerciciosTarea2.CadenasEnOrden();
 
             do
             {
@@ -42,7 +43,9 @@ namespace Tarea2
                     Console.WriteLine("7. Calcular Promedio de Calificaciones de un Salon de Clase en ArrayList");
                     Console.WriteLine("8. Diccionario de Palabras en HashTable");
                     Console.WriteLine("9. Agenda de Contactos en HashTable");
-                    Console.WriteLine("10. Salir");
+                    Console.WriteLine("10.Programa que muestra la fecha y hora en formato AM/PM");
+                    Console.WriteLine("11.Programa que muestra dos cadenas en orden alfabetico");
+                    Console.WriteLine("12. Salir");
                     Console.Write("Opcion:");
                     opcion = Convert.ToInt32(Console.ReadLine());
 
@@ -87,6 +90,12 @@ namespace Tarea2
                             agendaNueva.agenda();
                             break;
                         case 10:
+                            fecha.MostrarFechaHora();
+                            break;
+                        case 11:
+                            ordenCadena.MostrarCadenas();
+                            break;
+                        case 12:
                             Environment.Exit(1);
                             break;
 
@@ -102,7 +111,7 @@ namespace Tarea2
                     Console.ReadKey();
                 }
             }
-            while (opcion != 10);
+            while (opcion != 12);
         }
     }
 }

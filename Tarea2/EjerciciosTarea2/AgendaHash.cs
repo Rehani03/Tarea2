@@ -10,6 +10,7 @@ namespace Tarea2.EjerciciosTarea2
     public class AgendaHash
     {
         //este es el ejercicio 5 del capitulo 7
+        
         public void agenda()
         {
             Console.Clear();
